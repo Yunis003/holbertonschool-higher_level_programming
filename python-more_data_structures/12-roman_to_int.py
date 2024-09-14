@@ -1,15 +1,19 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
-    if isinstance(roman_string, str) or None:
-        return 0
-    else:
-        if roman_string == 'X':
-            return 10
-        elif roman_string == 'VII':
-            return 7
-        elif roman_string == 'IX':
-            return 9
-        elif roman_string == 'LXXXVII':
-            return 87
-        elif roman_string == 'DCCVII':
-            return 707
+    roman_value = {
+        'I':1,
+        'V':5,
+        'X':10,
+        'L':50,
+        'C':100,
+        'D':500
+    }
+
+    res = 0
+    for val in roman_string:
+        if val == None:
+            return 0
+        else:
+            current = roman_value[val]
+            res += current
+    return res
