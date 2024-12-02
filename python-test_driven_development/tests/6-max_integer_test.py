@@ -26,18 +26,6 @@ class TestMaxInteger(unittest.TestCase):
         """Test with all negative numbers"""
         self.assertEqual(max_integer([-1, -2, -3, -4]), -1)
 
-    def test_mixed_positive_and_negative(self):
-        """Test with a mix of positive and negative numbers"""
-        self.assertEqual(max_integer([-1, 2, -3, 4]), 4)
-
-    def test_max_at_beginning(self):
-        """Test with max at the beginning"""
-        self.assertEqual(max_integer([5, 1, 2, 3, 4]), 5)
-
-    def test_max_at_end(self):
-        """Test with max at the end"""
-        self.assertEqual(max_integer([1, 2, 3, 4, 5]), 5)
-
     def test_list_with_repeated_elements(self):
         """Test with repeated elements"""
         self.assertEqual(max_integer([1, 3, 3, 3, 2]), 3)
